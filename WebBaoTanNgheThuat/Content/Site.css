@@ -1,0 +1,89 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    background: linear-gradient(0deg, #ffffff, #befff2 ) no-repeat;
+}
+
+.Linkl {
+    text-decoration: none;
+    color: black;
+    padding: 13%;
+}
+
+.flex_layout {
+    display: flex;
+    text-align: center;
+    padding: 0 3% 0 3%;
+    gap: 1%;
+    background: linear-gradient(90deg, #58ec6b, #b1f6ef );
+}
+
+.flex_l {
+    padding: 1.5%;
+    text-align: center;
+    flex-grow: 4;
+}
+
+#Dn {
+    margin-left: 15%;
+}
+
+.flex_l:hover {
+    background: linear-gradient(90deg, #58eca2, #bee2ff );
+    transition: 0.7s;
+}
+
+.flex_l:active {
+    background: #8ec2ff;
+}
+
+.flex_Home_Mt {
+    display: flex;
+    padding: 1%;
+    margin: 2%;
+    gap: 2%;
+    background: #b4d7ff;
+    border-radius: 10px;
+}
+
+.LinkH_Mt {
+    text-decoration: none;
+    color: black;
+    padding: 2%;
+    background: #7affb4;
+    border-radius: 10px;
+}
+
+.LinkH_Mt:hover {
+    background: linear-gradient(90deg, #58eca2, #bee2ff );
+    transition: 1s;
+}
+
+.LinkH_Mt:active {
+    background: #8ec2ff;
+}
+
+#NoiDung_Mt {
+    background: #ffe37a;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.AnhH_Mt {
+    width: 817px;
+}
+
+.flexH_Mt2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+}
+
+.AnhH_Mt2_2 {
+    width: 100%;
+}
+
+.AnhH_An {
+    width: 500px;
+}

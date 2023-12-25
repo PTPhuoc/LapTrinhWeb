@@ -1,0 +1,56 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.flexDk{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin: 7% 0 8% 0;
+}
+
+.TitleDk{
+    text-align:center;
+}
+
+.BoxDk {
+    outline: none;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    width: 100%;
+    border: hidden;
+    border-radius: 10px;
+}
+
+.flexDk_1, .flexDk_2 {
+    border: 0.5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 0.5px;
+    padding: 50px;
+    
+}
+
+.NutDk1{
+    margin-left: 30%;
+}
+
+.NutDk2{
+    margin-left: 30%;
+}
+
+.NutDk1, .NutDk2 {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #58ec6b, #b1f6ef );
+    padding: 10px;
+    border: hidden;
+}
+
+.NutDk1:hover, .NutDk2:hover {
+    background: linear-gradient(90deg, #58eca2, #bee2ff );
+} 
+
+.ThongBaoDk{
+    color:red;
+}

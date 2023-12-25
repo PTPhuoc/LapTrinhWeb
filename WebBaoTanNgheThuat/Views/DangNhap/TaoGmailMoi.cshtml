@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "TaoGmailMoi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/TaoGmailMoi.css");
+}
+<br />
+<div class="flexTm">
+    <div class="flexTm1">
+        <p class="TextTm">Gmail <span class="GmailTm">@ViewBag.Gmail</span> chưa được tạo. Bạn có muốn tạo tài khoản mới với Gmail này.</p>
+        @using (Html.BeginForm("SetPasswordUser", "DangNhap"))
+        {
+            <button class="NutTm" type="submit">Đăng Ký</button>
+        }
+    </div>
+
+</div>

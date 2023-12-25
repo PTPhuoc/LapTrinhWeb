@@ -1,0 +1,35 @@
+﻿@model DangNhapViewModel
+@using WebBaoTanNgheThuat.Models
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/DangNhap.css")
+}
+
+<br />
+<div class="flexDn">
+    <div class="flexDn_1">
+        @using (Html.BeginForm("DangNhap", "DangNhap", FormMethod.Post))
+        {
+            <h3 class="titleDn">ĐĂNG NHẬP</h3>
+            @Html.TextBoxFor(m => m.Ten, new { @class = "BoxDn", placeholder = "Tên Tài Khoản" })
+            <br />
+            @Html.PasswordFor(m => m.MatKhau, new { @class = "BoxDn", placeholder = "Mật Khẩu" })
+            <p class="ThongBaoDn">@ViewBag.ThongBao</p>
+            <p class="TextDn">Bạn chưa có tài khoản, hãy @Html.ActionLink("Đăng Ký", "DangKy", "Home")</p>
+            <div class="flexDn2">
+                <button class="NutDn" type="submit">Đăng Nhập</button>
+            </div>
+        }
+            <br />
+            <hr/>
+            <p class="TextLineDn">Hoặc</p>
+        @using (Html.BeginForm("DangNhapGoogle", "DangNhap"))
+        {
+            <div class="flexDn2">
+                <button  class="NutGG" type="submit" value="Google" name="DichVu">Đăng nhập với Google</button>
+            </div>
+            
+        }
+    </div>
+</div>

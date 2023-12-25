@@ -1,0 +1,36 @@
+﻿@using WebBaoTanNgheThuat.Models
+@model DangBaiViewModel
+@{
+    ViewBag.Title = "DangBaiMyThuat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/DangBai.css");
+}
+
+<br />
+
+<div class="ChungDb">
+    <div class="flexDb">
+        @using (Html.BeginForm("DangBai", "MyThuat"))
+        {
+            <h3 class="TitleDb">ĐĂNG BÀI MỸ THUẬT</h3>
+            <div class="flexDb1">
+                @Html.TextBoxFor(m => m.Ten, new { @class = "BoxDb", placeholder = "Nhập Tên Ảnh" })
+                <br />
+                @Html.TextBoxFor(m => m.TenTacGia, new { @class = "BoxDb", placeholder = "Nhập Tác Giả" })
+                <br />
+            </div>
+            <div class="flexDb2">
+                <input class="NutDb" type="file" name="SRC" />
+            </div>
+            <div class="flexDb3">
+                <p>Nội Dung</p>
+                @Html.TextAreaFor(m => m.NoiDung, new {@class="BoxDb", rows = "5", cols = "50" })
+                
+            </div>
+            <div class="flexDb4">
+                <button class="NutDb" type="submit">Xác Nhận</button>
+            </div>
+        }
+
+    </div>
+</div>

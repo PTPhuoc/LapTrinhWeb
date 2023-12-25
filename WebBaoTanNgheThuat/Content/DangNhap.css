@@ -1,0 +1,59 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.flexDn{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 3% 0 3% 0;
+}
+
+.flexDn_1{
+   border: 0.5px solid black;
+   border-radius: 10px;
+   box-shadow: 0 1px 5px 0.5px;
+   padding: 50px;
+   
+}
+
+.titleDn {
+    text-align:center;
+}
+
+.BoxDn{
+    outline:none;
+    padding: 10px;
+    margin:10px 0 10px 0;
+    width:100%;
+    border: hidden;
+    border-radius: 10px;
+}
+
+.NutDn, .NutGG {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #58ec6b, #b1f6ef );
+    padding: 10px;
+    border: hidden;
+}
+
+.NutDn:hover , .NutGG:hover{
+    background: linear-gradient(90deg, #58eca2, #bee2ff );
+    
+}
+
+.ThongBaoDn{
+    color:red;
+}
+
+.TextLineDn{
+    text-align:center;
+}
+
+.flexDn2{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}

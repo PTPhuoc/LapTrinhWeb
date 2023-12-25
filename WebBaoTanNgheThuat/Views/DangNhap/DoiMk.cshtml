@@ -1,0 +1,25 @@
+﻿@using WebBaoTanNgheThuat.Models
+@model DoiMatKhauViewModel
+@{
+    ViewBag.Title = "DoiMk";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/DoiMatKhau.css");
+}
+
+<br />
+<div class="flexDmk">
+    <div class="flexDmk1">
+        <h3 class="TitleDmk">ĐỔI MẬT KHẨU</h3>
+        @using (Html.BeginForm("DoiMatKhau", "DangNhap", FormMethod.Post))
+        {
+            @Html.PasswordFor(m => m.MatKhauCu, new { @class = "BoxDmk", placeholder = "Nhập Mật Khẩu Củ" })
+            <br />
+            @Html.PasswordFor(m => m.MatKhauMoi, new { @class = "BoxDmk", placeholder = "Nhập Mật Khẩu Mới" })
+            <br />
+            @Html.PasswordFor(m => m.XacNhanMk, new { @class = "BoxDmk", placeholder = "Xác Nhận Mật Khẩu" })
+            <p class="ThongBao">@ViewBag.ThongBao</p>
+            <div class="flexDmk2"><button class="NutDmk" type="submit">Xác Nhận</button></div>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebBaoTanNgheThuat.Models.COVAT>
+@{
+    ViewBag.Title = "CoVat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/MyThuat.css");
+}
+
+<br />
+@{
+    if (ViewBag.Gmail == "tanphuocphan370@gmail.com")
+    {
+        using (Html.BeginForm("DangBaiCoVat", "CoVat"))
+        {
+            <button class="LinkMt">Đăng Bài</button>
+        }
+
+    }
+}
+<br />
+<div class="flexMt">
+    @foreach (var item in Model)
+    {
+        <div class="flexMt1">
+            <div class="flexMt2">
+                <img class="AnhMt" src="~/AnhVaVideo/@Html.DisplayFor(m => item.SRC)" />
+            </div>
+            <div class="flexMt_Nd">
+                <br />
+                <h1>@Html.DisplayFor(m => item.TEN)</h1>
+                <hr />
+                <p class="TextMt">
+                    <b>Thời gian: </b> @Html.DisplayFor(m => item.THOI_GIAN)
+                    <br /><br />
+                    <b>Tác giả: </b> @Html.DisplayFor(m => item.TEN_TAC_GIA)
+                    <br /><br />
+                    <b>Nội dung: </b>@Html.DisplayFor(m => item.NOI_DUNG)
+                </p>
+                <hr />
+                <br />
+                <a class="LinkDl" href="~/AnhVaVideo/@Html.DisplayFor(m => item.SRC)"><i id="IconDl" class="fa-sharp fa-solid fa-circle-down"></i></a>
+            </div>
+            <div>
+                @{
+                    if (ViewBag.Gmail == "tanphuocphan370@gmail.com")
+                    {
+                        using (Html.BeginForm("XoaBai", "CoVat"))
+                        {
+                            <button id="XbMt" class="LinkMt" name="SRC" value="@Html.DisplayFor(m => item.SRC)">Xóa Bài</button>
+                        }
+                    }
+                }
+
+            </div>
+        </div>
+        <br />
+    }
+</div>
+
+

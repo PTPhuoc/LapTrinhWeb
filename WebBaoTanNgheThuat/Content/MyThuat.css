@@ -1,0 +1,65 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.flexMt{
+    display: flex;
+    flex-direction:column;
+    position:relative;
+    margin: 2% 2% 0 2%;
+}
+
+.AnhMt {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+}
+
+.flexMt1 {
+    display: flex;
+    gap: 1%;
+    padding: 1%;
+    background: #c2ffd1;
+    border-radius:15px;
+}
+
+.flexMt2 {
+    background: #9dc2fd;
+    border-radius:15px;
+    padding: 2% 15% 2% 15% ;
+}
+
+.flexMt_Nd {
+    border-radius: 15px;
+    background: #ffdac2;
+    padding:2%;
+}
+
+#IconDl{
+    font-size: 35px !important;
+}
+
+.LinkMt {
+    text-decoration: none;
+    border: none;
+    color: black;
+    padding: 15px;
+    font-size: 18px;
+    font-family: "Times New Roman";
+    background: linear-gradient(90deg, #58ec6b, #b1f6ef );
+}
+
+.LinkMt:hover {
+    background: linear-gradient(90deg, #58eca2, #bee2ff );
+}
+
+#XbMt {
+    position: absolute;
+    border-radius: 15px;
+    right: 3%;
+    margin-top:1%;
+}

@@ -1,0 +1,81 @@
+﻿@using WebBaoTanNgheThuat.Models
+@model DoiTenViewModel
+@{
+    ViewBag.Title = "Taikhoan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/TaiKhoan.css");
+}
+
+<div class="ChungTk">
+    <div class="flexTk">
+        <div class="flexTk1">
+            <h3 class="TitleTk">THÔNG TIN CHUNG</h3>
+        </div>
+        <div class="flexTk2">
+            <p><b>Tên tài khoản</b></p>
+            <hr />
+            <p>@ViewBag.Ten</p>
+            @{
+                if(ViewBag.ChucNang == null)
+                {
+                    using (Html.BeginForm("TaiKhoan", "Home"))
+                    {
+                        <button class="NutTk" name="ChucNang" value="1" type="submit">Đổi Tên Tài Khoản</button>
+                    }
+                    
+                }
+                if (ViewBag.ChucNang == "1")
+                {
+                    using (Html.BeginForm("SetNameUser", "DangNhap", FormMethod.Post))
+                    {
+                        @Html.TextBoxFor(m => m.Ten, new { @class = "BoxTk", placeholder = "Nhập Tên Tài Khoản Mới" })
+                        <button class="NutTk" value=@ViewBag.Gmail name="Gmail" type="submit">Đổi</button>
+                        <p class="ThongBaoTk">@ViewBag.ThongBao1</p>
+                    }
+                }
+            }
+        </div>
+        <div class="flexTk3">
+            <br />
+            <p><b>Gmail</b></p>
+            <hr />
+            <p>@ViewBag.Gmail</p>
+        </div>
+        <div class="flexTk6">
+            <br />
+            <p><b>Mật khẩu</b></p>
+            <hr />
+            @using (Html.BeginForm("DoiMk", "DangNhap"))
+            {
+                <button class="NutTk" type="submit">Đổi Mật Khẩu</button>
+            }
+
+        </div>
+        <div class="flexTk4">
+            @{
+                if (ViewBag.Gmail == "tanphuocphan370@gmail.com")
+                {
+                    <p><b>Xóa tài khoản</b></p>
+                    <hr />
+                    <p class="ThongBaoTk">@ViewBag.ThongBao</p>
+                    using (Html.BeginForm("XoaTaiKhoan", "DangNhap"))
+                    {
+                        @Html.TextBoxFor(m => m.Gmail, new { @class = "BoxTk",name = "Email", placeholder = "Nhập gmail muốn xóa" })
+                        <button class="NutTk" type="submit">Xác Nhận</button>
+                    }
+                }
+                
+            }
+        </div>
+        <br />
+        <hr />
+        <div class="flexTk5">
+            <br />
+            @using (Html.BeginForm("DangXuat", "DangNhap"))
+            {
+                <button class="NutTk" type="submit">Đăng Xuất</button>
+            }
+        </div>
+    </div>
+</div>
+

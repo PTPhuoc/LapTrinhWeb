@@ -1,0 +1,39 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.TitleTk{
+    text-align: center;
+}
+
+.ChungTk {
+    margin: 5% 20% 5% 20%;
+    background: #b5edff;
+    padding: 3%;
+    border-radius: 15px;
+    box-shadow: 0 1px 5px 0.5px;
+}
+
+.NutTk {
+    border-radius: 10px;
+    background: #37ff5f;
+    padding: 10px;
+    border: hidden;
+}
+
+.flexTk5{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.BoxTk {
+    outline: none;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    width: 100%;
+    border: hidden;
+    border-radius: 10px;
+}

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "HomeMain";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Styles.Render("~/Content/Site.css");
+}
+<br />
+<div>
+    <div class="flex_Home_Mt">
+        <div class="flexH_Mt1"><img src="~/AnhVaVideo/TranhHome1.jpg" class="AnhH_Mt" /></div>
+        <div class="flexH_Mt2">
+            <div class="flexH_Mt2.1" id="NoiDung_Mt">
+                <p>
+                    Tại đây chúng tôi có đầy đủ tất cả loại tranh sơn dầu do các họa sĩ tại Việt Nam sáng tác.
+                    Cùng nhau hưởng thức các tác phẩm tranh sơn dầu và cùng nhau đánh giá, sở hữu những tác phẩm mà bạn yêu thích.
+                </p>
+                <br />
+                @Html.ActionLink("Tại Đây", "MyThuat", "Home", new { @class = "LinkH_Mt" })
+                <br />
+            </div>
+            <div class="flexH_Mt2_2"><img src="~/AnhVaVideo/AnhHome2.jfif" class="AnhH_Mt2_2" /></div>
+        </div>
+    </div>
+    <div class="flex_Home_Mt">
+        <div id="NoiDung_Mt">
+            <p>
+                Với bề dày lịch sử trải qua hàng ngàn năm nay thì những giá trị lịch sử để lại là vô cùng phong phú và đa dạng. 
+                Một số di tích lịch sử – văn hóa, di vật, cổ vật đã được khai thác và đem lại nhiều ý nghĩa cho cuộc sống tinh thần. 
+                Tuy nhiên, vẫn còn một số bảo vật bị chôn vùi, chưa thể phát hiện và khai thác hết được.  
+                Những cổ vật này giá trị lịch sử, văn hóa khoa học rất ý nghĩa và quan trọng đối với lịch sử.
+            </p>
+            <br />
+            @Html.ActionLink("Tại Đây", "CoVat", "Home", new { @class = "LinkH_Mt" })
+        </div>
+        <div>
+            <img src="~/AnhVaVideo/Tranh_Home.jfif" class="AnhH_An" />
+        </div>
+    </div>
+</div>

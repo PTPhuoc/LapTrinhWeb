@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CoVat">
+  <DataContextMoniker Name="/CoVatDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2fc9fd87-4b3e-4063-a217-c9c2fb1f0ef0" absoluteBounds="2.75, 2, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CoVatDataContext/COVAT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="01268550-d92d-432d-863d-8a56cee40ae2" absoluteBounds="2.765, 2.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

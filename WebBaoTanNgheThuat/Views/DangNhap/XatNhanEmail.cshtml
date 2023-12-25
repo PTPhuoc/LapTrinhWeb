@@ -1,0 +1,22 @@
+﻿@using WebBaoTanNgheThuat.Models
+@model ConfirmCodeViewModel
+@{
+    ViewBag.Title = "XatNhanEmail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/XatNhanEmail.css");
+}
+<br />
+<div class="flexXn">
+    <div class="flexXn1">
+        <h3 class="TitleXn">XÁC NHẬN EMAIL</h3>
+        @using (Html.BeginForm("XacNhan", "DangNhap", FormMethod.Post))
+        {
+            @Html.Hidden("Gmail", new { value = ViewBag.Gmail })
+            @Html.Hidden("Code", new { value = ViewBag.Code })
+            @Html.TextBoxFor(m => m.VerifyCode, new { @class = "BoxXn", placeholder = "Nhập Code" })
+            <p class="ThongBaoSp">@ViewBag.ThongBao</p>
+            <button class="NutXn" type="submit">Xác Nhận</button>
+        }
+        
+    </div>
+</div>

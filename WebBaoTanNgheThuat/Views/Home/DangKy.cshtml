@@ -1,0 +1,45 @@
+﻿@using WebBaoTanNgheThuat.Models
+@model DangKyViewModel
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/DangKy.css");
+}
+
+<br />
+<div class="flexDk">
+    @{
+        DangKyViewModel Dk = new DangKyViewModel();
+        Dk.Gmail = ViewBag.Gmail;
+        if (Dk.Gmail == null)
+        {
+            using (Html.BeginForm("DangKyUser", "DangNhap", FormMethod.Post))
+            {
+            <div class="flexDk_1">
+                <h3 class="TitleDk">ĐĂNG KÝ</h3>
+                @Html.TextBoxFor(m => m.Gmail, new {@class = "BoxDk", placeholder = "Nhập Gmail" })
+                <p class="ThongBaoDk">@ViewBag.ThongBao</p>
+                <button class="NutDk1" type="submit">Xác Nhận</button>
+            </div>
+                
+            }
+        }
+        else
+        {
+            using (Html.BeginForm("DangKyUser", "DangNhap", FormMethod.Post))
+            {
+            <div class="flexDk_2">
+                <h3 class="TitleDk">THÊM THÔNG TIN</h3>
+                @Html.Hidden("Gmail", new { value = ViewBag.Gmail })
+                @Html.TextBoxFor(m => m.Ten, new {@class="BoxDk", placeholder = "Nhập Tên..." })
+                <br />
+                @Html.PasswordFor(m => m.MatKhau, new { @class = "BoxDk", placeholder = "Nhập Mật Khẩu..." })
+                <br />
+                @Html.PasswordFor(m => m.XatNhanMk, new { @class = "BoxDk", placeholder = "Xác Nhận Mật Khẩu..." })
+                <p class="ThongBaoDk">@ViewBag.ThongBao</p>
+                <button class="NutDk2" type="submit">Xác Nhận</button>
+            </div>
+            }
+        }
+    }
+</div>
